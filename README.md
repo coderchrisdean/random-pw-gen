@@ -1,4 +1,4 @@
-#Assignment:
+<h1>#Assignment:</h1>
 
 ```
 This is week 3 JavScript HW assignment.
@@ -6,8 +6,9 @@ This is week 3 JavScript HW assignment.
 ```
 
 ## Screenshot:
-
+<img src="./assets/images/screenshotpwgen.png">
 ## Link to Code:
+<br>
 <a href="https://github.com/coderchrisdean/random-pw-gen/blob/main/index.html">Link to Code</a>
 <a href ="https://coderchrisdean.github.io/random-pw-gen/">Link to Deployed Site</a>
 
