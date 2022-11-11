@@ -1,0 +1,138 @@
+// Assignment Code -- variables
+var generateBtn = document.querySelector("#generate");
+
+var pwLCLetters = [
+  ["apple"],
+  "b",
+  "c",
+  "d",
+  "e",
+  "f",
+  "g",
+  "h",
+  "i",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n",
+  "o",
+  "p",
+  "q",
+  "r",
+  "s",
+  "t",
+  "u",
+  "v",
+  "w",
+  "x",
+  "y",
+  "z",
+];
+var pwUCLetters = [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "H",
+  "I",
+  "J",
+  "K",
+  "L",
+  "M",
+  "O",
+  "P",
+  "Q",
+  "R",
+  "S",
+  "T",
+  "U",
+  "V",
+  "W",
+  "X",
+  "Y",
+  "Z",
+];
+var pwNumbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9",];
+var pwSpecialChar = ["!", "%", "$", "&", "<", "^",];
+
+var potentialCharacters = []; //placeholder for concatted array
+
+function generatePassword() {
+  // prompt password requirements
+  // prompt function for character length
+  var pwGenerated = ""; //placeholder for generated password
+  var pwLength = prompt(
+    "Please select a password between 8 and 128 characters in length."
+  );
+
+  if (pwLength < 8 || pwLength > 128) {
+    alert(
+      "Your password must be at 8 characters and no more than 128 characters."
+    ); //  if less than 8 or more than 128, alert user must be at least 8 characters and at least 128 characters
+    return null;
+  }
+
+  if (isNaN(pwLength)) {
+    alert("You must enter a number between 8 and 128.");
+    console.log(pwGenerated); //check work
+    return null;
+  }
+
+  // if within range, then go through series of prompts and get final array
+  var U = confirm("Would you like your password to include uppercase letters?");
+  var L = confirm("Would you like your password to include lowercase letters?");
+  var N = confirm("Would you like your password to include numbers?");
+  var S = confirm("Would you like your password to include symbols?");
+
+  if (U === false && L === false && N === false && S === false) {
+    alert("Your password must contain at least one of the four options.");
+    return null;
+  }
+
+  if (U === true) {
+    potentialCharacters = potentialCharacters.concat(pwUCLetters);
+    console.log(pwUCLetters); //checkwork
+  }
+
+  if (L === true) {
+    potentialCharacters = potentialCharacters.concat(pwLCLetters);
+    console.log(pwLCLetters); //checkwork
+  }
+  if (N === true) {
+    potentialCharacters = potentialCharacters.concat(pwNumbers);
+  }
+  if (S === true) {
+    potentialCharacters = potentialCharacters.concat(pwSpecialChar);
+    console.log(potentialCharacters); //check work
+  }
+  //randomize the array
+  // determine the length (value) of combined array
+var removeFromCharaters = potentialCharacters.splice
+console.log(pwLength)
+  for (var i = 0; i < pwLength; i++) {
+    pwGenerated +=
+      potentialCharacters[
+        Math.floor(Math.random() * potentialCharacters.length)
+      ];
+  }
+  console.log(pwGenerated); // check work
+  window.alert("Your new password is: " + pwGenerated);
+
+  return writePassword(pwGenerated);
+  //
+}
+
+function writePassword(password) {
+  // var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  // Write password to the #password input
+  passwordText.value = password;
+}
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", generatePassword);
