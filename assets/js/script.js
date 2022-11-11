@@ -2,7 +2,7 @@
 var generateBtn = document.querySelector("#generate");
 
 var pwLCLetters = [
-  ["apple"],
+  "a",
   "b",
   "c",
   "d",
@@ -125,12 +125,12 @@ console.log(pwLength)
   return writePassword(pwGenerated);
   //
 }
-
+  // Write password to the #password input
 function writePassword(password) {
   // var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  // Write password to the #password input
+
   passwordText.value = password;
 }
 

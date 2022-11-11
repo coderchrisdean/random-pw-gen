@@ -1,3 +1,16 @@
+#Assignment:
+
+```
+This is week 3 JavScript HW assignment.
+
+```
+
+## Screenshot:
+
+## Link to Code:
+<a href="https://github.com/coderchrisdean/random-pw-gen/blob/main/index.html">Link to Code</a>
+<a href ="https://coderchrisdean.github.io/random-pw-gen/">Link to Deployed Site</a>
+
 # 03 JavaScript: Password Generator
 
 ## Your Task
