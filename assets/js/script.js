@@ -1,63 +1,12 @@
 // Assignment Code -- variables
 var generateBtn = document.querySelector("#generate");
 
-var pwLCLetters = [
-  "a",
-  "b",
-  "c",
-  "d",
-  "e",
-  "f",
-  "g",
-  "h",
-  "i",
-  "j",
-  "k",
-  "l",
-  "m",
-  "n",
-  "o",
-  "p",
-  "q",
-  "r",
-  "s",
-  "t",
-  "u",
-  "v",
-  "w",
-  "x",
-  "y",
-  "z",
-];
-var pwUCLetters = [
-  "A",
-  "B",
-  "C",
-  "D",
-  "E",
-  "F",
-  "G",
-  "H",
-  "I",
-  "J",
-  "K",
-  "L",
-  "M",
-  "O",
-  "P",
-  "Q",
-  "R",
-  "S",
-  "T",
-  "U",
-  "V",
-  "W",
-  "X",
-  "Y",
-  "Z",
-];
-var pwNumbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9",];
-var pwSpecialChar = ["!", "%", "$", "&", "<", "^",];
+var pwLCLetters = ["ant", "ban", "car", "dog", "ear", "fun", "gum", "hat", "ink", "jet", "key", "lot", "man", "net", "orb", "pie", "rat", "rob", "sun", "tux", "uni", "vow", "win", "xyl", "yak", "zoo"];
+var pwUCLetters = ["ARM", "BAT", "CAT", "DOG", "ELE", "FUN", "GUM", "HAT", "INK", "JET", "KEY", "LOT", "MAN", "NET", "ORB", "PIE", "QAT", "ROB", "SUN", "TUX", "UNI", "VOW", "WIN", "XRAY", "YAK", "ZOO"];
+
+var pwNumbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9","0",];
+var pwSpecialChar = ["!", "#", "$", "%", "&", "*", "+", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "^", "_", "`", "{", "|", "}", "~"];
+
 
 var potentialCharacters = []; //placeholder for concatted array
 
