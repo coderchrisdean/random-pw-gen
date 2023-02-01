@@ -2,20 +2,17 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
 // Assignment Code -- variables
-var pwLCLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var pwUCLetters = ["A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z"];
-var pwNumbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0",];
-var pwSpecialChar = ["!", "#", "$", "%", "&", "*", "+", "-", "/", ":", ";", "<", "=", ">", "?", "@", "[", "^", "_", "`", "{", "|", "}", "~"];
-var potentialCharacters = []; //placeholder for concatted array
+var pwLCLetters = "abcdefghijklmnopqrstuvwxyz";
+var pwUCLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var pwNumbers = "0123456789";
+var pwSpecialChar = "!#$%&*+-/:;<=>?@[^_`{|}~";
+var potentialCharacters = ""; //placeholder for concatted array
 var pwGenerated = ""; //placeholder for final password
 
 
   // prompt password requirements
   // prompt function for character length
-  var pwLength = prompt(
-    "Please select a password between 8 and 128 characters in length."
-  );
-
+  var pwLength = parseInt(prompt("Please select a password length between 8 and 128 characters."));
   if (pwLength < 8 || pwLength > 128) {
     alert(
       "Your password must be at 8 characters and no more than 128 characters."
@@ -60,16 +57,14 @@ var pwGenerated = ""; //placeholder for final password
   // determine the length (value) of combined array
 // var removeFromCharaters = potentialCharacters.splice
 console.log(pwLength)
-  for (var i = 0; i < pwLength; i++) {
-    pwGenerated +=
-      potentialCharacters[
-        Math.floor(Math.random() * potentialCharacters.length)
-      ];
-  }
+for (var i = 0; i < pwLength -1; i++) { //fixes the overage in the generated password
+  pwGenerated += potentialCharacters.charAt(Math.floor(Math.random() * potentialCharacters.length));
+}
   console.log(pwGenerated); // check work
   window.alert("Your new password is: " + pwGenerated);
+  writePassword(pwGenerated);
+ 
 
-  return writePassword(pwGenerated);
   //
 }
   // Write password to the #password input
