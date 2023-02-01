@@ -57,7 +57,7 @@ var pwGenerated = ""; //placeholder for final password
   // determine the length (value) of combined array
 // var removeFromCharaters = potentialCharacters.splice
 console.log(pwLength)
-for (var i = 0; i < pwLength -1; i++) { //fixes the overage in the generated password
+for (var i = 0; i < pwLength; i++) {
   pwGenerated += potentialCharacters.charAt(Math.floor(Math.random() * potentialCharacters.length));
 }
   console.log(pwGenerated); // check work
